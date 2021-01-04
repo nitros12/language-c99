@@ -419,6 +419,7 @@ instance Pretty DeclnSpecs where
   pretty (DeclnSpecsType    ts  mds) = pretty ts  <+> pretty mds
   pretty (DeclnSpecsQual    tq  mds) = pretty tq  <+> pretty mds
   pretty (DeclnSpecsFun     fs  mds) = pretty fs  <+> pretty mds
+  pretty (DeclnSpecsAttr    as  mds) = text as  <+> pretty mds
 
 instance Pretty InitDeclrList where
   pretty (InitDeclrBase     id) = pretty id

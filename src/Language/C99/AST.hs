@@ -424,12 +424,15 @@ data DeclnSpecs = DeclnSpecsStorage StorageClassSpec (Maybe DeclnSpecs)
                 | DeclnSpecsType    TypeSpec         (Maybe DeclnSpecs)
                 | DeclnSpecsQual    TypeQual         (Maybe DeclnSpecs)
                 | DeclnSpecsFun     FunSpec          (Maybe DeclnSpecs)
+                | DeclnSpecsAttr    AttributeSpec    (Maybe DeclnSpecs)
 
 data InitDeclrList = InitDeclrBase               InitDeclr
                    | InitDeclrCons InitDeclrList InitDeclr
 
 data InitDeclr = InitDeclr            Declr
                | InitDeclrInitr Declr Init
+
+type AttributeSpec = String
 
 {- 6.7.1 -}
 data StorageClassSpec = STypedef
